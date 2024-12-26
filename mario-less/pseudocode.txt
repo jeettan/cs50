@@ -1,0 +1,5 @@
+Height: 2, Spaces: 1
+Height: 4, Spaces: 3
+Height: 8, Spaces: 7
+
+So that means that the amount of spaces is equal to SPACE - 1 

@@ -1,0 +1,96 @@
+sort1 uses: BUBBLE SORT
+
+How do you know?: LONGEST to sort for large random numbers. But the fastest to sort organized numbers.
+
+sort2 uses: MERGE SORT
+
+How do you know?: For big complexity tasks, it's by far the fastest.
+
+sort3 uses: SELECTION SORT
+
+How do you know?: Taking the averages of all the tests, took the longest to execute overall.
+
+Time experiments
+
+SORT1:
+
+RANDOM5000.txt.
+real : 0.07s
+user: 0.033s
+sys: 0.029s
+
+RANDOM10000.txt
+real: 0.218s
+user: 0.142s
+sys: 0.059s
+
+Test1 - small number random
+
+Find out which one executes the fastest, with lower bound - that is bubble sort.
+
+SORT1 for 5000 - 0.036s, 0.009s, 0.022s
+SORT 2 for 5000 - 0.067s, 0.091s, 0.031s
+SORT3 for 5000 - 0.049s, 0.02s, 0.028s
+
+conclusion - about the same time, because the complexity is small.
+
+Test2 - SORTED 50,000
+
+SORT1 for 50000 - 0.477s, 0.017s, 0.271
+SORT2 for 50000 - 0.564s, 0.031s, 0.272s
+SORT3 for 50000 - 2.539s, 1.813s, 0.258s
+
+SORT1 also took the fastest to sort for SORTED numbers, hinting at a BUBBLE sort. While sort3 took the slowest.
+
+Test3 - random 50,000 large number
+
+SORT1 for random50000 -  6.131s, 5.196s, 0.3s
+SORT2 for random50000 - 0.488s, 0.042s, 0.260s
+SORT3 for random50000 - 2.392s, 1.865s, 0.298s
+
+Conclusion - SORT1 took the longest to sort for large random numbers. Which could hint that SORT1 is the BUBBLE sort. SORT2 was the fastest for large random number.
+
+TEST4 - reverse order 50,000
+
+SORT1 for reversed 50000
+
+SORT1 - 5.062s, 4.433s, 0.317s
+SORT2 - 0.519s, 0.024s, 0.268s
+SORT3 - 2.629s, 2.057s, 0.322s
+
+SORT1 took the longset to sort for REVERSED numbers as well. Which could hint at a bubble sort. While sort2 performed consistently well.
+
+TEST6 - SMALL range reversed 5000 (medium complexity)
+
+SORT1 - 0.117s, 0.047s, 0.031s
+SORT2 - 0.032s, 0.00s, 0.026s
+SORT3 - 0.093s, 0.032s, 0.023s
+
+CLEAR WINNER is sort2 - for the fastest. SORT2 was also the fastest for a medium complexity task. This hints at a merge sort.
+
+TEST6 - SORTED10000 (mid complixity)
+
+SORT1 - 0.085s, 0s, 0.58s
+SORT2 - 0.129s, 0.00s, 0.57s
+SORT3 - 0.167s, 0.71s, 0.060s
+
+SORT3 took the longest, hinting at it being a selection sort. SORT1 fastest, hinting at bubble.
+
+FINAL TEST7 - take random 10000, if sort2 wins then sort2 is MERGE sort.
+
+SORT1 - 0.204s, 0.144s, 0.054s,
+SORT2 - 0.078s, 0.004s, 0.057s
+SORT3 - 0.142s, 0.082s, 0.052s
+
+After running the tests - SORT2 perfomed the best for RANDOM mid-high level complexity task.
+
+Information about the sorts
+
+1. Bubble sort takes the shortest amount of time for LESS complex tasks.
+2. Bubble sort also takes the longest to sort for the most complex tasks
+
+Possible answers
+
+SORT1 - BUBBLE SORT, reason - LONGEST to sort for large random numbers. But the fastest to sort organized numbers.
+SORT2 - MERGE SORT, big complexity, it's by far the fastest.
+SORT3 - SELECTION SORT - taking the averages of the tests, took the longest to execute overall.

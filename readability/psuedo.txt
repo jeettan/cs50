@@ -1,0 +1,37 @@
+Putting it All Together
+Now it’s time to put all the pieces together! Recall that the Coleman-Liau index is computed using the formula:
+
+index = 0.0588 * L - 0.296 * S - 15.8
+where L is the average number of letters per 100 words in the text, and S is the average number of sentences per 100 words in the text.
+
+Modify main in readability.c so that instead of outputting the number of letters, words, and sentences, it instead outputs (only) the grade level as defined by the Coleman-Liau index (e.g. "Grade 2" or "Grade 8" or the like). Be sure to round the resulting index number to the nearest int!
+
+Hints
+Recall that round is declared in math.h, per manual.cs50.io!
+Recall that, when dividing values of type int in C, the result will also be an int, with any remainder (i.e., digits after the decimal point) discarded. Put another way, the result will be “truncated.” You might want to cast your one or more values to float before performing division when calculating L and S!
+If the resulting index number is 16 or higher (equivalent to or greater than a senior undergraduate reading level), your program should output "Grade 16+" instead of outputting an exact index number. If the index number is less than 1, your program should output "Before Grade 1".
+
+Case 1 =
+We have 55 words.
+We have 250 letters.
+We have 2 sentences.
+
+What is the average number of letters PER 100 words. So to find out average per 100 words is 55/100 * 250
+
+Case 2 =
+
+We have 150 words.
+We have 250 letters.
+We have 2 sentences.
+
+What is the average number of letters PER 100 words. So we have 150 words = 1.5. So we have 100% is 1/1.5 * 250
+
+ 0.0588 * averageletter - 0.296 * averagesentence - 15.8;
+
+ 0.0588 * 2.232 - 0.296 * 0.32 - 15.8
+
+The text the user inputted has 65 letters, 4 sentences, and 14 words. 65 letters per 14 words is an average of about 464.29 letters per
+100 words (because 65 / 14 * 100 = 464.29). And 4 sentences per 14 words is an average of about 28.57 sentences per 100 words (because 4 / 14 * 100 = 28.57).
+Plugged into the Coleman-Liau formula, and rounded to the nearest integer,
+we get an answer of 3 (because 0.0588 * 464.29 - 0.296 * 28.57 - 15.8 = 3):
+so this passage is at a third-grade reading level.

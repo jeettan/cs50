@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <title>Trivia!</title>
+
+</head>
+
+<body>
+    <div class="header">
+        <h1>Trivia!</h1>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h2>Part 1: Multiple Choice </h2>
+            <hr>
+            <h3> Question 1: What is the color of the sky?</h3>
+            <ul class="choices">
+                <li>
+                    <label><input type="radio" name="question0" value="A" /><span>Blue</span></label>
+                </li>
+                <li>
+                    <label><input type="radio" name="question0" value="B" /><span>Green</span></label>
+                </li>
+                <li>
+                    <label><input type="radio" name="question0" value="C" /><span>Orange</span></label>
+                </li>
+                <li>
+                    <label><input type="radio" name="question0" value="D" /><span>I don't know</span></label>
+                </li>
+            </ul>
+            </li>
+            </ul>
+            <button id="submit">Submit</button>
+            <div id="showanswer1"></div>
+            <!-- TODO: Add multiple choice question here -->
+        </div>
+
+        <div class="section">
+            <h2>Part 2: Free Response</h2>
+            <hr>
+            <h3> Question 2: What is the capital of Thailand?</h3>
+            <input type="textbox" id="answer2"></input>
+            <button id="submit2">Submit</button>
+            <!-- TODO: Add free response question here -->
+            <div id="showanswer2"></div>
+        </div>
+    </div>
+
+    <script>
+
+        document.getElementById("submit").addEventListener("click", function () {
+            console.log("Hello World");
+            var x = document.getElementsByName('question0');
+
+            for (var j = 0; j < x.length; j++) {
+                var radiosValue = x[j];
+
+                if (radiosValue.checked) {
+                    if (radiosValue.value == "A" && radiosValue.checked) {
+                        document.getElementById('showanswer1').innerHTML = "Correct!";
+                        document.getElementById("submit").style.backgroundColor = "green";
+                    } else {
+                        document.getElementById('showanswer1').innerHTML = "Incorrect";
+                        document.getElementById("submit").style.backgroundColor = "red";
+                    }
+                }
+            }
+        });
+
+        document.getElementById("submit2").addEventListener("click", function(){
+
+            var x = document.getElementById('answer2');
+
+            if(x.value == "Bangkok" || x.value == "bangkok"){
+                document.getElementById('showanswer2').innerHTML = "Correct!";
+                document.getElementById("answer2").style.backgroundColor = "green";
+            } else{
+                document.getElementById('showanswer2').innerHTML = "Incorrect!";
+                document.getElementById("answer2").style.backgroundColor = "red";
+
+            }
+
+        });
+
+
+    </script>
+</body>
+
+</html>

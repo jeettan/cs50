@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+
+    <h2>History</h2>
+    <table id="printable">
+        <thead>
+        <tr>
+            <th>Share</th>
+            <th>Amount</th>
+            <th>Time bought</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for histories in history %}
+        <tr>
+            <td>{{histories['share']}}</td>
+            <td>{{histories['amount']}}</td>
+            <td>{{histories['time_bought']}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+
+{% endblock %}

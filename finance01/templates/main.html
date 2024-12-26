@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Main Menu
+{% endblock %}
+
+{% block main %}
+
+    <h2>Main Menu</h2>
+    <table id="printable">
+        <thead>
+        <tr>
+            <th>Stock</th>
+            <th>Number</th>
+            <th>Price</th>
+            <th>Total Value</th>
+            <th colspan="3">Buy/sell</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for shares in list_of_shares %}
+        <tr>
+            <td>{{shares['share']}}</td>
+            <td>{{shares['amount']}}</td>
+            <td>{{shares['price'] | usd }}</td>
+            <td>{{shares['total'] | usd}}</td>
+            <form action="/buymain" method="post" name="form"">
+            <input type="hidden" name="form_id" value="{{loop.index}}">
+            <td class="grayson">
+                <select name="buysell{{loop.index}}" id="buysell">
+                <option value="buy">Buy</option>
+                <option value="sell">Sell</option>
+                </select>
+            </td>
+            <td class="grayson">
+                <input autocomplete="off" autofocus class="form-control-sm align-left" id="amount" name="amount{{ loop.index }}" placeholder="amount" type="number" min="1" required></input>
+            </td>
+            <td class="grayson2">
+                <button class="btn btn-primary" name="submit" type="submit">Submit</button>
+            </td>
+        </form>
+        </tr>
+
+        {% endfor %}
+        <tfoot>
+            <tr>
+                <th>Balance</th>
+                <th>Total Assets</th>
+            </tr>
+            <tr>
+                <td>{{final['balance'] | usd}}</td>
+                <td>{{final['total'] | usd}}</td>
+            </tr>
+        </tfoot>
+    </tbody>
+    </table>
+{% endblock %}

@@ -1,0 +1,54 @@
+/* Size for brand */
+nav .navbar-brand
+{
+    font-size: xx-large;
+}
+
+/* Colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+
+#printable{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#printable td, #printable th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+
+  #printable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #8e0900;
+    color: white;
+  }
+
+  #printable .grayson{
+    text-align:left;
+    border-left: none;
+    border-right: none;
+    width: 90px;
+  }
+
+  #printable .grayson2{
+    border-left: none;
+    width: 90px;
+
+  }
